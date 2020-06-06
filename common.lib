@@ -1,0 +1,54 @@
+# common.lib
+#
+# ver 0.2.0
+# Modified: 24-05-2020
+
+# Essential files
+BOT="DEVBOT"
+ESSFILE="run.sh nightrun.sh common.lib cortana.sh"
+CDN="https://erto.my.id"
+
+DEF="\e[0m"
+ULINE="\e[4m"
+CDEF="\e[39m"
+LCYAN="\e[96m"
+LGREN="\e[92m"
+LRED="\e[91m"
+INV="\e[7m"
+BOLD="\e[1m"
+
+
+# isi 1 baris kosong
+function f1baris() {
+    printf "\n"
+}
+
+# isi 2 baris kosong
+function f2baris() {
+    printf "\n\n"
+}
+
+# bye dari Cortana waktu exit
+function fbye() {
+    echo -e "${LCYAN}[${BOT}]:${CDEF} Bye."
+}
+
+# buat file bisa dieksekusi
+function fchmodx() {
+    sudo chmod +x $1
+}
+
+# bye dari Cortana waktu exit
+function fselesai() {
+    echo -e "${LGREN}✔  ${ULINE}SELESAI.${DEF}${CDEF}"
+}
+
+# hapus files asal
+function frmfile() {
+    rm -fR $FILE
+}
+
+# hapus related files saat keluar
+function frmall() {
+    rm -fR $FILE $ESSFILE
+}
