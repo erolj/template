@@ -9,14 +9,13 @@ NAMA_PROJECT="cortana"
 echo -e "${LCYAN}»  Membuat file static..${CDEF}"
 hugo --ignoreCache && sleep 1
 f1baris
-# echo "» Push updates to GIT.."
-# git add . && sleep 1
-# echo "Apa yang diubah kali ini?"
-# read -r GIT_COMMENT && sleep 1
-# git commit -am "${GIT_COMMENT}" && sleep 1
-# git push -u origin master && sleep 1
-# printf "\n"
-# f1baris
+echo "» Push updates to GIT.."
+git add . && sleep 1
+echo "Apa yang diubah kali ini?"
+read -r GIT_COMMENT && sleep 1
+git commit -am "${GIT_COMMENT}" && sleep 1
+git push -u origin master && sleep 1
+f1baris
 echo -e "${LCYAN}»  Deploy ke ${DEPLF}..${CDEF}"
 function flfirebase() {
     firebase login
